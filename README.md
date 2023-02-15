@@ -2,6 +2,8 @@
 <h1>HolbertonBnB (AirBnB Clone)</h1>
 </div>
 
+<img src="https://user-images.githubusercontent.com/68792144/141602345-7b71c4ea-a4dd-42d9-b706-7fc2c7b85ca5.png" alt="HBNB image"/>
+
 # Description
 This repository contains a complete Full Stack web application. The stack is HTML5/CSS3/JavaScript(jQuery) on the front-end, Python(Flask)/Gunicorn on the back-end, and MySQL on the database.
 
@@ -16,9 +18,12 @@ Below I leave links with the four versions.
 3. [AirBnB_Clone_v3](https://github.com/Ineffable22/AirBnB_clone_v3)
 4. [AirBnB_Clone_v4](https://github.com/Ineffable22/AirBnB_clone_v4)
 
+<img src="images/web_infrastructure_design.png" alt="web_infrastructure_design"/>
+
 The builds of the AirBnB_Clone versions are separate and isolated code bases. While the first one was started from scratch, each of versions 2, 3, and 4 involved inheriting and building on top of repositories started by previous cohorts at Holberton School. Additionally, the work completed for each version involved collaboration and pair programming with a cohort partner. In other words, I worked with a different cohort partner for each version. This not only helps in personal improvement in Soft Skills and Hard Skills, but in showing that you can adapt in various environments both with different partners and also with advanced code and that you can correct it if necessary.
 
 I consider this repository as one that stands out because I make use of multiple technologies.
+
 
 I started this repository as a duplicate of AirBnB_clone_v4, the final version was worked on within the scope of the Holberton syllabus. Since then, I have:
 
@@ -27,6 +32,9 @@ I started this repository as a duplicate of AirBnB_clone_v4, the final version w
 - Fixed the front-end and wrote new self-deploying Puppet and Fabric scripts.
 - Wrote detailed and organized documentation for all parts of the repository and API routes.
 
+<img src="images/main_page.png" alt="main page"/>
+
+<img src="images/filters.png" alt="filters page"/>
 
 ## Environment variables
 
