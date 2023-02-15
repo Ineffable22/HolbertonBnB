@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>AirBnB clone</title>
+	      <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <link rel="stylesheet" href="../static/styles/common.css?{{ cache_id }}"/>
+        <link rel="stylesheet" href="../static/styles/header.css?{{ cache_id }}"/>
+        <link rel="stylesheet" href="../static/styles/footer.css?{{ cache_id }}"/>
+        <link rel="stylesheet" href="../static/styles/filters.css?{{ cache_id }}"/>
+        <link rel="stylesheet" href="../static/styles/places.css?{{ cache_id }}"/>
+	<script type="text/javascript" src="../static/scripts/hbnb.js?{{ cache_id }}"></script>
+    </head>
+    <body>
+        <header>
+          <div id="header_logo"></div>
+          <div id="api_status" class="status-default"></div>
+        </header>
+        <div class="container">
+
+            <!-- TODO Section Filters  -->
+            <section class="filters">
+                <button>Search</button>
+                <!-- !Filter by Locations -->
+                <div class="locations">
+                    <h3>States</h3>
+                    <h4 id="h4_states" class="h4_states"> &nbsp;</h4>
+                    <ul class="popover">
+                        {% for state in states | sort(attribute='name') %}
+                        <li><input type="checkbox" data-id={{ state.id|e }} data-name={{ state.name|e }}><h2>{{ state.name|e }}</h2>
+                            <ul>
+                                {% for city in state.cities | sort(attribute='name') %}
+                                <li>
+                                  <input type="checkbox" data-id={{ city.id|e }} data-name={{ city.name|e }}><h4 class="city_name">{{ city.name|e }}</h4>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <!-- !Filter by Amenities -->
+                <div class="amenities">
+                    <h3>Amenities</h3>
+                    <h4 id="h4_amenities" class="h4_amenities">&nbsp;</h4>
+                    <ul class="popover">
+                        {% for amenity in amenities | sort(attribute='name') %}
+                        <li><input type="checkbox" data-id={{ amenity.id|e }} data-name={{ amenity.name|e }}>{{ amenity.name|e }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TODO Section Places  -->
+            <section class="places">
+                <h1>Places</h1>
+            </section>
+        </div>
+        <footer>
+            <p>Holberton School</p>
+        </footer>
+    </body>
+</html>
